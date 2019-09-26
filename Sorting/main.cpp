@@ -122,13 +122,13 @@ public:
 					new_list->Add(test, index_val);
 					break;
 				}
-    		}
-    	}
+			}
+		}
 		
 		head = new_list->head;
 		bot = new_list->bot;
 		delete(new_list);
-    }
+	}
 };
 
 int main()
