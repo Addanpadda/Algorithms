@@ -1,13 +1,12 @@
 #include <iostream>
-#include <alloca.h>
 
 
 class list {
 private:
 	struct node {
-    	int val;
-    	node *next, *prev;
-    };
+		int val;
+		node *next, *prev;
+	};
 
 	node *head = NULL, *bot;
 	int values = 0;
@@ -18,19 +17,19 @@ private:
 		node *n;
 
 		if(index < values/2)
-	    {
+		{
         	n = head;
         	for(int current_index = 0; current_index != index; current_index++)
         	{
         		n = n->next;
         	}
-        } else{
-        	n = bot;
-        	for(int current_index = values-1; current_index != index; current_index--)
-        	{
-        		n = n->prev;
-        	}
-        }
+		} else{
+			n = bot;
+				for(int current_index = values-1; current_index != index; current_index--)
+				{
+				n = n->prev;
+				}
+		}
 
 		return n;
 	}
@@ -45,10 +44,10 @@ public:
 			bot = head;
 
 		} else{
-            bot->next = new node;
-            bot->next->prev = bot;
-            bot->next->val = value;
-            bot = bot->next;
+			bot->next = new node;
+			bot->next->prev = bot;
+			bot->next->val = value;
+			bot = bot->next;
 		}
 		values++;
 	}
