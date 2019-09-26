@@ -69,7 +69,7 @@ public:
 		{
 			head = new_node;
 		} else{
-        	new_node->prev = n->prev;
+			new_node->prev = n->prev;
 			n->prev->next = new_node;
 		}
 		n->prev = new_node;
