@@ -104,20 +104,20 @@ public:
     	}
 	}
 	void Sort()
-    {
+	{
 		int avg = Get(0);	// Make use of!
 		list *new_list = new list();
 		new_list->Add(Get(0));
 
 
-    	for(int index = 1; index < values; index++)
+		for(int index = 1; index < values; index++)
 		{
 			int index_val = Get(index);
-			avg = (avg+index_val)/2;
+			int avg = (avg+index_val)/2;
 
-    		for(int test = 0; test <= index; test++)
-    		{	
-    			if(test == new_list->values || index_val < new_list->Get(test))
+			for(int test = 0; test <= index; test++)
+			{	
+				if(test == new_list->values || index_val < new_list->Get(test))
 				{
 					new_list->Add(test, index_val);
 					break;
