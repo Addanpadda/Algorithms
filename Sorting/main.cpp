@@ -25,10 +25,10 @@ private:
         	}
 		} else{
 			n = bot;
-				for(int current_index = values-1; current_index != index; current_index--)
-				{
+			for(int current_index = values-1; current_index != index; current_index--)
+			{
 				n = n->prev;
-				}
+			}
 		}
 
 		return n;
